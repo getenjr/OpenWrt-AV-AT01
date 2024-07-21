@@ -22,7 +22,7 @@ on:
 
 env:
   SOURCE_URL: https://github.com/immortalwrt/immortalwrt
-  SOURCE_BRANCH: ImmortalWrt 23.05.2
+  SOURCE_BRANCH: openwrt.23.05.4
   CURRENT_BRANCH: main
   WEB_ROOT_PATH: /data/www/openwrt.cc
   TOOLCHAIN_TAG: toolchain
