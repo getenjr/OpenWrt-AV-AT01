@@ -22,7 +22,7 @@ on:
 
 env:
   SOURCE_URL: https://github.com/immortalwrt/immortalwrt
-  SOURCE_BRANCH: openwrt-18.06-k5.4
+  SOURCE_BRANCH: ImmortalWrt 23.05.2
   CURRENT_BRANCH: main
   WEB_ROOT_PATH: /data/www/openwrt.cc
   TOOLCHAIN_TAG: toolchain
@@ -38,6 +38,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
+
+      - name: Show CPU Model
+      run: |
+        echo -e "Total CPU cores\t: $(nproc)"
+        cat /proc/cpuinfo | grep 'model name'
+        ulimit -a
 
       - name: Clone Source Code
         run: |
